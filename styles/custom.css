@@ -1,3 +1,7 @@
+html {
+    min-height: 1000px;
+}
+
 body {
     background-image: url(../images/Sun-Shiny-Day.jpg);
     background-repeat: no-repeat;
@@ -5,9 +9,9 @@ body {
 }
 
 .container {
+    min-height: 800px;
     margin: auto;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: 20px;
     text-align: center;
     max-width: 600px;
     background: #f8f8f8;
@@ -18,7 +22,9 @@ body {
 .quoteBox {
     max-width: 400px;
     font-family: 'Spectral SC', serif;
-    margin: 2rem auto;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
     padding: 1rem;
     border: 1px solid black;
     border-radius: 10px;
@@ -27,5 +33,8 @@ body {
 #buttonNextQuote {
     margin-top: 2rem;
     margin-bottom: 2rem;
+    height: 2rem;
+    background-color: #377bb5;
+    color: white;
 }
 
