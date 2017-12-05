@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', startQuote);
 var maoriQuoteBox, englishQuoteBox;
 
 
-function startQuote () {
+function startQuote() {
 
     // Add button click listener
     document.getElementById('buttonNextQuote').onclick = nextQuote;
@@ -18,15 +18,19 @@ function startQuote () {
 }
 
 function nextQuote() {
-   let oReq = new XMLHttpRequest();
-   oReq.addEventListener("load", reqListener);
-   oReq.open("GET", "https://eda-te-reo.herokuapp.com/api/proverbs");
-   oReq.send();
+    document.getElementById("loaderOverlay").style.display = "block";
+    document.getElementById("loader").style.display = "block";
+    let oReq = new XMLHttpRequest();
+    oReq.addEventListener("load", reqListener);
+    oReq.open("GET", "https://eda-te-reo.herokuapp.com/api/proverbs");
+    oReq.send();
 }
 
 function reqListener() {
     let json = JSON.parse(this.responseText);
 
+    document.getElementById("loaderOverlay").style.display = "none";
+    document.getElementById("loader").style.display = "none";
     maoriQuoteBox.innerHTML = json.source;
     englishQuoteBox.innerHTML = json.translation;
 
