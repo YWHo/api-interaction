@@ -21,6 +21,7 @@ h3 {
     background: #f8f8f8;
     padding: 20px;
     border-radius: 10px;
+    box-shadow: -10px 10px 20px;
 }
 
 .quoteBox {
@@ -32,6 +33,7 @@ h3 {
     padding: 1rem;
     border: 1px dashed black;
     border-radius: 10px;
+    box-shadow: -3px 3px 8px rgba(100,100,100,.8);
 }
 
 #buttonNextQuote {
@@ -40,5 +42,6 @@ h3 {
     height: 2rem;
     background-color: #377bb5;
     color: white;
+    box-shadow: -3px 3px 8px rgba(100,100,100,.8);
 }
 
